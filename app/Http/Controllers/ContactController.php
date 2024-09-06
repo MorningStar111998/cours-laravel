@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Http\Requests\ContactRequest;
 use GuzzleHttp\Psr7\Request;
 
@@ -13,9 +14,7 @@ class ContactController extends Controller
 
     public function store(ContactRequest $request)
     {
-        $infos = $request;
-        return view('confirm', ['infos' => $infos]);
+
+        return view('confirm', ['infos' => $request]);
     }
-
 }
-
